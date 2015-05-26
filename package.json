@@ -1,7 +1,7 @@
 {
   "name": "jsdom-cheerio-adapter",
   "version": "0.0.1",
-  "description": "",
+  "description": "A direct drop-in replacement for ``jsdom`` that delegates to your own ``cheerio`` and ``request`` versions of choice.",
   "author": "Leonard Wu <leonard.wu92@alumni.ic.ac.uk>",
   "contributors": [{
     "name": "Leonard Wu",
