@@ -25,7 +25,7 @@ jsdom.env({
 	done: function (errors, window) {
 		var $ = window.$;
 		console.log("HN Links");
-		$("td.title:not(:last) a").each(function() {
+		$("td.title a").each(function() {
 			console.log(" -", $(this).text());
 		});
 		window.close();
