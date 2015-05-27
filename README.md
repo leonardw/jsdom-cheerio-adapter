@@ -16,17 +16,17 @@ var request = require('request');
 var cheerio = require('cheerio');
 
 // Adapt to support jsdom interface
-var jsdom = require("jsdom-cheerio-adapter")(cheerio, request);
+var jsdom = require('jsdom-cheerio-adapter')(cheerio, request);
 
 // Unmodified, original jsdom call, now run by cheerio + request behind the scene
 jsdom.env({
-	url: "http://news.ycombinator.com/",
-	scripts: ["http://code.jquery.com/jquery.js"],
+	url: 'http://news.ycombinator.com/',
+	scripts: ['http://code.jquery.com/jquery.js'],
 	done: function (errors, window) {
 		var $ = window.$;
-		console.log("HN Links");
-		$("td.title a").each(function() {
-			console.log(" -", $(this).text());
+		console.log('HN Links');
+		$('td.title a').each(function() {
+			console.log(' -', $(this).text());
 		});
 		window.close();
 	}
